@@ -1,0 +1,10 @@
+<component name="ArtifactManager">
+  <artifact name="word-frequency-counter:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/word_frequency_counter_jar</output-path>
+    <root id="root">
+      <element id="archive" name="word-frequency-counter.jar">
+        <element id="module-output" name="word-frequency-counter" />
+      </element>
+    </root>
+  </artifact>
+</component>
