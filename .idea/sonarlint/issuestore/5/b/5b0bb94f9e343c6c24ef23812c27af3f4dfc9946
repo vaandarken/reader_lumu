@@ -1,13 +1,0 @@
-
-g
-java:S2095"EUse try-with-resources or close this "Scanner" in a "finally" clause.(®ú½—şÿÿÿÿ8…Ü¯•Ä.
-{
-java:S2293"YReplace the type specification in this constructor call with the diamond operator ("<>").(”Ñøıÿÿÿÿ8…Ü¯•Ä.
-U	java:S106"9Replace this use of System.out or System.err by a logger.(ÃÊä8…Ü¯•Ä.
-P
-java:S1481".Remove this unused "charCount" local variable.(ßòéûÿÿÿÿ8…Ü¯•Ä.
-{
-java:S2293"YReplace the type specification in this constructor call with the diamond operator ("<>").(ßòéûÿÿÿÿ8…Ü¯•Ä.
-M
-java:S1172"+Remove this unused method parameter "args".(ÓÆ®¨úÿÿÿÿ8…Ü¯•Ä.
-Z	java:S106"9Replace this use of System.out or System.err by a logger.(·€î…ÿÿÿÿÿ8…Ü¯•Ä.
