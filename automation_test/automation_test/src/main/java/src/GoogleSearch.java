@@ -8,6 +8,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 import java.time.Duration;
+import java.util.HashSet;
+import java.util.Set;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
@@ -54,6 +56,70 @@ public class GoogleSearch {
         Assertions.assertEquals("inter miami cf", imcfTitle.toLowerCase());
 
 
+    }
+    public class LongestSubstringWithoutRepeatingCharacters {
+
+        public static int longestSubstringWithoutRepeatingCharacters(String str1) {
+            int longestSubstringLength = 0;
+            String currentSubstring = "";
+            Set<Character> characterSet = new HashSet<>();
+
+            for (char character : str1.toCharArray()) {
+                if (!characterSet.contains(character)) {
+                    currentSubstring += character;
+                    characterSet.add(character);
+                } else {
+                    if (currentSubstring.length() > longestSubstringLength) {
+                        longestSubstringLength = currentSubstring.length();
+                    }
+                    currentSubstring = character + "";
+                }
+            }
+
+            if (currentSubstring.length() > longestSubstringLength) {
+                longestSubstringLength = currentSubstring.length();
+            }
+
+            return longestSubstringLength;
+        }
+
+        public static void main(String[] args) {
+            String str1 = "abcabcbb";
+            int longestSubstringLength = longestSubstringWithoutRepeatingCharacters(str1);
+            System.out.println("The length of the longest substring without repeating characters is " + longestSubstringLength);
+        }
+    }
+    public class longestSubstringWithoutRepeatingCharacters {
+
+        public static int longestSubstringWithoutRepeatingCharacters(String str1) {
+            int longestSubstringLength = 0;
+            String currentSubstring = "";
+            Set<Character> characterSet = new HashSet<>();
+
+            for (char character : str1.toCharArray()) {
+                if (!characterSet.contains(character)) {
+                    currentSubstring += character;
+                    characterSet.add(character);
+                } else {
+                    if (currentSubstring.length() > longestSubstringLength) {
+                        longestSubstringLength = currentSubstring.length();
+                    }
+                    currentSubstring = character + "";
+                }
+            }
+
+            if (currentSubstring.length() > longestSubstringLength) {
+                longestSubstringLength = currentSubstring.length();
+            }
+
+            return longestSubstringLength;
+        }
+
+        public static void main(String[] args) {
+            String str1 = "abcabcbb";
+            int longestSubstringLength = longestSubstringWithoutRepeatingCharacters(str1);
+            System.out.println("The length of the longest substring without repeating characters is " + longestSubstringLength);
+        }
     }
 
 

@@ -23,7 +23,7 @@ public class Reader {
 
     public static void main(String[] args) throws IOException {
 
-        BufferedReader reader = new BufferedReader(new FileReader("src/INPUT.txt"));
+        BufferedReader reader = new BufferedReader(new FileReader("fileReader/src/INPUT.txt"));
         String text;
 
         ArrayList<String> wordCount = new ArrayList<>();
