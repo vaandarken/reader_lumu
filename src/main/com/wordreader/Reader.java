@@ -12,11 +12,15 @@ import java.util.Map;
 public class Reader {
 
     public static List reader(String[] list) {
+
+        //organize the characters read on a HashMap
         Map<String, Integer> mapCounter = new HashMap<>();
         for (String i : list) {
             Integer j = mapCounter.get(i);
             mapCounter.put(i, (j == null) ? 1 : j + 1);
         }
+
+        //Sort the items in the HashMap ascending
         List<Map.Entry<String, Integer>> sortedMap = new ArrayList<>(mapCounter.entrySet());
         Collections.sort(sortedMap, new Comparator<Map.Entry<String, Integer>>() {
             @Override
@@ -25,6 +29,7 @@ public class Reader {
             }
         });
 
+        //organize the information on sortedMap
         for (Map.Entry<String, Integer> val : sortedMap) {
             System.out.println(val.getKey() + ": " + val.getValue());
         }
@@ -33,26 +38,26 @@ public class Reader {
 
 
     public static void main(String[] args) throws IOException {
-        String file_path = "C:\\Users\\vaand\\Documents\\Code projects\\reader\\src\\main\\resources\\INPUT.txt";
 
+        //Read the input file
+        String file_path = "C:\\Users\\vaand\\Documents\\Code projects\\reader\\src\\main\\resources\\INPUT.txt";
         BufferedReader reader = new BufferedReader(new FileReader(file_path));
         String text;
 
         List<String> wordCount = new ArrayList<>();
         StringBuilder stringBuilder = new StringBuilder();
 
+        //The information read is now mapped on the wordcount variable and the total characters on Stringbuilder
         while ((text = reader.readLine()) != null) {
             stringBuilder.append(text).append("\n");
             wordCount.add(stringBuilder.toString().trim());
         }
-        while ((text = reader.readLine()) != null) {
-            stringBuilder.append(text).append("\n");
-            wordCount.add(stringBuilder.toString().trim());
-        }
+
 
         String readerToString = stringBuilder.toString();
         String[] wordsRead = readerToString.split("\\s+");
 
+        //Print results
         System.out.println("\n" + stringBuilder.toString().length() + " Characters \n");
         System.out.println(wordsRead.length + " words\n");
 
