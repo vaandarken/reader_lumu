@@ -64,6 +64,7 @@ public class Reader {
         reader(wordsRead);
         reader.close();
 
+        //This code has a complexity of 0(n)
 
     }
 }
