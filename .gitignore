@@ -12,6 +12,7 @@ reader/src/main/resources/META-INF/maven
 .idea/libraries/
 *.iws
 *.iml
+Code projects.iml
 *.ipr
 
 ### Eclipse ###
